@@ -113,6 +113,9 @@ let g:nerdtree_tabs_focus_on_files=1
 Plugin 'ntpeters/vim-better-whitespace'
 map <leader><space> :StripWhitespace <cr>
 
+Plugin 'andymass/vim-matchup'
+
+let g:loaded_matchparen=1
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
