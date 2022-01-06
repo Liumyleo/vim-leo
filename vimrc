@@ -113,9 +113,18 @@ let g:nerdtree_tabs_focus_on_files=1
 Plugin 'ntpeters/vim-better-whitespace'
 map <leader><space> :StripWhitespace <cr>
 
+" 括号匹配
 Plugin 'andymass/vim-matchup'
-
 let g:loaded_matchparen=1
+
+" Gitlens  需要vim8.2
+Plugin 'APZelos/blamer.nvim'
+let g:blamer_enabled = 1
+let g:blamer_delay = 500
+let g:blamer_show_in_insert_modes = 1
+let g:blamer_show_in_visual_modes = 1
+let g:blamer_prefix = ' > '
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
