@@ -1,4 +1,6 @@
 set clipboard=unnamed
+" enable delete key in insert mode
+set backspace=indent,eol,start
 
 " 一键执行
 map <F5> :call CompileRunGcc()<CR>
