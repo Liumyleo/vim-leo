@@ -117,7 +117,7 @@ let g:nerdtree_tabs_open_on_console_startup=1
 let g:nerdtree_tabs_focus_on_files=1
 
 Plugin 'ntpeters/vim-better-whitespace'
-map <leader><space> :StripWhitespace <cr>
+map <leader>c<space> :StripWhitespace <cr>
 
 " 括号匹配
 Plugin 'andymass/vim-matchup'
@@ -141,11 +141,17 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 let g:airline_theme='angr'
 
+" fzf
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 nnoremap <silent> <c-p> :Files <CR>
 nnoremap <silent> ag :Ag <CR>
 nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
+
+" 快速注释
+Plugin 'preservim/nerdcommenter'
+let g:NERDDefaultAlign = 'left'
+map <leader><space> <Plug>NERDCommenterToggle <CR>
 
 " csv
 " Plugin 'chrisbra/csv.vim'
