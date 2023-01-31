@@ -18,7 +18,7 @@ func! CompileRunGcc()
     elseif &filetype == 'sh'
        :!time bash %
     elseif &filetype == 'python'
-       exec "!time python %"
+       exec "!time python3 %"
     elseif &filetype == 'html'
        exec "!firefox % &"
     elseif &filetype == 'go'
@@ -33,7 +33,6 @@ endfunc
 set t_Co=256
 " 显示序号
 set number relativenumber
-"set nu rnu
 "set relativenumber
 nnoremap <F4> :set nonu nornu!<CR>
 "autocmd InsertEnter * :set norelativenumber number
@@ -46,8 +45,6 @@ nnoremap <F4> :set nonu nornu!<CR>
 "inoremap { {<CR>}<ESC>O
 " 显示语法
 syntax on
-" 添加配色
-colorscheme molokai
 " 自动缩进
 set autoindent
 " 搜索时，高亮显示匹配结果
@@ -73,6 +70,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+
 
 Plugin 'Valloric/YouCompleteMe'
 let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
@@ -127,6 +125,21 @@ let g:blamer_show_in_insert_modes = 1
 let g:blamer_show_in_visual_modes = 1
 let g:blamer_prefix = ' > '
 
+" gruvbox主题配色
+Plugin 'morhetz/gruvbox'
+autocmd vimenter * ++nested colorscheme gruvbox
+set bg=dark
+
+" Powerline 状态条
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline_theme='angr'
+
+" csv
+" Plugin 'chrisbra/csv.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+
