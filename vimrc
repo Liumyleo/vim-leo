@@ -1,4 +1,6 @@
 set clipboard=unnamed
+" paste
+xnoremap p pgvy
 " enable delete key in insert mode
 set backspace=indent,eol,start
 
