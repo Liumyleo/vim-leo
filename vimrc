@@ -4,6 +4,9 @@ xnoremap p pgvy
 " enable delete key in insert mode
 set backspace=indent,eol,start
 
+" 禁用mouse，若使用则设a
+set mouse=""
+
 " 一键执行
 map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
@@ -70,6 +73,7 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 " call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
+" :PluginInstall
 Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 
@@ -136,6 +140,12 @@ set bg=dark
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 let g:airline_theme='angr'
+
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
+nnoremap <silent> <c-p> :Files <CR>
+nnoremap <silent> ag :Ag <CR>
+nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
 
 " csv
 " Plugin 'chrisbra/csv.vim'
