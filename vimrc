@@ -68,15 +68,13 @@ highlight CursorColumn   cterm=bold ctermbg=black  guibg=#2b2b2b
 set nocompatible              " required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 " alternatively, pass a path where Vundle should install plugins
 " call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
-" :PluginInstall
-Plugin 'gmarik/Vundle.vim'
+Plugin 'gmarik/vundle'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
-
 
 Plugin 'Valloric/YouCompleteMe'
 let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
