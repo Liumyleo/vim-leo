@@ -1,7 +1,6 @@
 ##  vim-leo
 
 ```bash
-mv ./vim ~/.vim
 mv vimrc ~/.vimrc
 ```
 当整个 .vim 文件夹迁移时，YCM可能会报错：`YouCompleteMe unavailable: unable to load Python`  
