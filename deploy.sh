@@ -17,7 +17,7 @@ sudo apt-get remove \
 sudo rm -rf /usr/local/share/vim /usr/local/bin/vim /usr/bin/vim ~/.vim ~/.vimrc
 
 # Install Deps
-sudo apt-get install build-essential cmake
+sudo apt-get install build-essential cmake libncurses-dev
 sudo apt-get install python3-dev
 
 git clone https://github.com/vim/vim.git
@@ -37,6 +37,7 @@ cd ..
         --with-python3-config-dir=$($(sudo which python3)-config --configdir)
 
 make && sudo make install
+cd ..
 
 # Custom Vim
 git clone https://github.com/Liumyleo/vim-leo.git
