@@ -154,6 +154,20 @@ map <leader><space> <Plug>NERDCommenterToggle <CR>
 " csv
 " Plugin 'chrisbra/csv.vim'
 
+" 高亮所有选中单词
+Plugin 'lfv89/vim-interestingwords'
+
+" indentline
+Plugin 'Yggdroot/indentLine'
+"----缩进指示线 indentLine 配置 ----------
+let g:indentLine_enabled = 1
+let g:indentLine_char='┆'
+
+" 自动补全阔号
+Plugin 'jiangmiao/auto-pairs'
+let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"'}
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
