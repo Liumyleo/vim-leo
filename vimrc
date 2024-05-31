@@ -165,6 +165,7 @@ Plugin 'Yggdroot/indentLine'
 "----缩进指示线 indentLine 配置 ----------
 let g:indentLine_enabled = 0
 let g:indentLine_char='┆'
+nnoremap <Leader>l :IndentLinesToggle<CR>
 
 " 自动补全阔号
 Plugin 'jiangmiao/auto-pairs'
