@@ -110,6 +110,9 @@ nmap <F1> :NERDTreeToggle<cr>
 map  <C-l> :tabn<CR>
 map  <C-h> :tabp<CR>
 map  <C-n> :tabnew<CR>
+nnoremap <C-w>v :vsplit<CR>
+nnoremap <C-s> :split<CR>
+
 Plugin 'jistr/vim-nerdtree-tabs'
 let g:nerdtree_tabs_open_on_console_startup=1
 let g:nerdtree_tabs_focus_on_files=1
@@ -123,7 +126,7 @@ let g:loaded_matchparen=1
 
 " Gitlens  需要vim8.2
 Plugin 'APZelos/blamer.nvim'
-let g:blamer_enabled = 1
+let g:blamer_enabled = 0
 let g:blamer_delay = 500
 let g:blamer_show_in_insert_modes = 1
 let g:blamer_show_in_visual_modes = 1
@@ -132,7 +135,7 @@ let g:blamer_prefix = ' > '
 " gruvbox主题配色
 Plugin 'morhetz/gruvbox'
 autocmd vimenter * ++nested colorscheme gruvbox
-set bg=dark
+set bg=light
 
 " Powerline 状态条
 Plugin 'vim-airline/vim-airline'
@@ -160,7 +163,7 @@ Plugin 'lfv89/vim-interestingwords'
 " indentline
 Plugin 'Yggdroot/indentLine'
 "----缩进指示线 indentLine 配置 ----------
-let g:indentLine_enabled = 1
+let g:indentLine_enabled = 0
 let g:indentLine_char='┆'
 
 " 自动补全阔号
