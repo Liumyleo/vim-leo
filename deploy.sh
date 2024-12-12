@@ -18,7 +18,7 @@ sudo rm -rf /usr/local/share/vim /usr/local/bin/vim /usr/bin/vim ~/.vim ~/.vimrc
 
 # Install Deps
 sudo apt-get install build-essential cmake libncurses-dev
-sudo apt-get install python3-dev
+sudo apt-get install python3-dev universal-ctags
 
 git clone https://github.com/vim/vim.git
 

@@ -171,6 +171,9 @@ nnoremap <Leader>l :IndentLinesToggle<CR>
 Plugin 'jiangmiao/auto-pairs'
 let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"'}
 
+" 函数与变量名tagbar
+Plugin 'preservim/tagbar'
+autocmd FileType python,c,cpp TagbarOpen
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
