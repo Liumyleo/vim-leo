@@ -124,7 +124,7 @@ map <leader>c<space> :StripWhitespace <cr>
 Plugin 'andymass/vim-matchup'
 let g:loaded_matchparen=1
 
-" Gitlens  需要vim8.2
+" Gitlens 需要vim8.2
 Plugin 'APZelos/blamer.nvim'
 let g:blamer_enabled = 0
 let g:blamer_delay = 500
@@ -132,7 +132,7 @@ let g:blamer_show_in_insert_modes = 1
 let g:blamer_show_in_visual_modes = 1
 let g:blamer_prefix = ' > '
 
-" gruvbox主题配色
+" gruvbox 主题配色
 Plugin 'morhetz/gruvbox'
 autocmd vimenter * ++nested colorscheme gruvbox
 set bg=light
@@ -160,9 +160,8 @@ map <leader><space> <Plug>NERDCommenterToggle <CR>
 " 高亮所有选中单词
 Plugin 'lfv89/vim-interestingwords'
 
-" indentline
+" indentLine 缩进指示线 
 Plugin 'Yggdroot/indentLine'
-"----缩进指示线 indentLine 配置 ----------
 let g:indentLine_enabled = 0
 let g:indentLine_char='┆'
 nnoremap <Leader>l :IndentLinesToggle<CR>
@@ -173,7 +172,8 @@ let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"'}
 
 " 函数与变量名tagbar
 Plugin 'preservim/tagbar'
-autocmd FileType python,c,cpp TagbarOpen
+"autocmd FileType python,c,cpp TagbarOpen
+nnoremap <F2> :TagbarToggle<CR>
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
