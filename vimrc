@@ -133,9 +133,15 @@ let g:blamer_show_in_visual_modes = 1
 let g:blamer_prefix = ' > '
 
 " gruvbox 主题配色
-Plugin 'morhetz/gruvbox'
-autocmd vimenter * ++nested colorscheme gruvbox
-set bg=light
+"Plugin 'morhetz/gruvbox'
+"autocmd vimenter * ++nested colorscheme gruvbox
+"set bg=light
+
+" dracula 主题配色
+Plugin 'dracula/vim'
+syntax enable
+set termguicolors
+colorscheme dracula
 
 " Powerline 状态条
 Plugin 'vim-airline/vim-airline'
@@ -160,7 +166,7 @@ map <leader><space> <Plug>NERDCommenterToggle <CR>
 " 高亮所有选中单词
 Plugin 'lfv89/vim-interestingwords'
 
-" indentLine 缩进指示线 
+" indentLine 缩进指示线
 Plugin 'Yggdroot/indentLine'
 let g:indentLine_enabled = 0
 let g:indentLine_char='┆'
