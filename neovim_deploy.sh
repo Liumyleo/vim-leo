@@ -17,6 +17,9 @@ cp ./tree-sitter-linux-x64 ~/.local/bin/tree-sitter
 sudo apt update && sudo apt install -y xclip
 echo 'vim.opt.clipboard = "unnamedplus"' >> ~/.config/nvim/lua/config/options.lua
 
+# 关闭默认的format_on_save
+echo 'vim.g.autoformat = false' >> ~/.config/nvim/lua/config/options.lua
+
 # grep
 sudo apt install -y ripgrep
 sudo apt install -y fd-find
@@ -43,18 +46,6 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.diagnostic.disable()  -- 禁用诊断
   end,
 })
-
-# 禁用 Python 的 autoformat
-~/.config/nvim/lua/plugins/conform.lua
-
-return {
-  "stevearc/conform.nvim",
-  opts = {
-    formatters_by_ft = {
-      python = {},  -- ❌ 禁用 python 格式化
-    },
-  },
-}
 
 
 # Ollama
