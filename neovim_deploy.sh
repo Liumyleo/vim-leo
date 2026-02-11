@@ -20,6 +20,11 @@ echo 'vim.opt.clipboard = "unnamedplus"' >> ~/.config/nvim/lua/config/options.lu
 # 关闭默认的format_on_save
 echo 'vim.g.autoformat = false' >> ~/.config/nvim/lua/config/options.lua
 
+# 启用视觉换行
+echo 'vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true' >> ~/.config/nvim/lua/config/options.lua
+
 # grep
 sudo apt install -y ripgrep
 sudo apt install -y fd-find
