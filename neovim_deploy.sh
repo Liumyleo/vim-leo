@@ -38,21 +38,22 @@ sudo npm install -g pyright
 echo 'vim.g.lazyvim_python_lsp = "pyright"' >> ~/.config/nvim/lua/config/options.lua
 
 
-
-# 至此安装完毕，下面是一些基础配置
-
-'''
 # 禁用自动诊断
-.config/nvim/init.lua
+cat <<'EOF' >> ~/.config/nvim/lua/config/options.lua
 
+-- Disable diagnostics for Python files (Neovim 0.12+)
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "javascript", "typescript", "python" }, -- 指定文件类型
-  callback = function()
-    vim.diagnostic.disable()  -- 禁用诊断
+  pattern = "python",
+  callback = function(args)
+    vim.diagnostic.enable(false, { bufnr = args.buf })
   end,
 })
 
+EOF
 
+
+# 至此安装完毕，下面是一些vibe coding配置
+'''
 # Ollama
 # install
 curl -fsSL https://ollama.com/install.sh | sh
