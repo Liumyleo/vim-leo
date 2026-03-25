@@ -52,46 +52,16 @@ vim.api.nvim_create_autocmd("FileType", {
 EOF
 
 
-# 至此安装完毕，下面是一些vibe coding配置
-'''
-# Ollama
-# install
-curl -fsSL https://ollama.com/install.sh | sh
-ollama serve 
-ollama pull qwen3:4b
-
-
-# .config/nvim/lua/plugins/avante.lua
-
-return {
+# codeium AI补全插件
+echo 'return {
   {
-    "yetone/avante.nvim",
-    event = "VeryLazy",
-    version = false, -- Never set this value to "*"! Never!
-    opts = {
-      provider = "ollama",
-      auto_suggestions_provider = nil,
-      providers = {
-        ollama = {
-          endpoint = "http://127.0.0.1:11434",
-          model = "qwen3:4b",
-        },
-      },
-    },
-    build = "make",
-    dependencies = {
-      "zbirenbaum/copilot.lua", -- for providers='copilot'
-      "nvim-treesitter/nvim-treesitter",
-      "stevearc/dressing.nvim", -- for input provider dressing
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
-      "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-      --- The below dependencies are optional,
-      "nvim-mini/mini.pick", -- for file_selector provider mini.pick
-      "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
-      "ibhagwan/fzf-lua", -- for file_selector provider fzf
-    },
+    "Exafunction/codeium.vim",
+    event = "BufEnter",
   },
-}
-'''
+}' >> ~/.config/nvim/lua/plugins/ai-completion.lua
+
+# codeium鉴权时由于noice插件，网址显示不全，可以先禁用，后打开
+echo 'return {
+  "folke/noice.nvim",
+  enabled = true, -- set to false to disable noice
+}' >> ~/.config/nvim/lua/plugins/noice.lua
